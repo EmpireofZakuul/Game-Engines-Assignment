@@ -1,27 +1,45 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.IO;
 
-[RequireComponent(typeof(AudioSource))]
+//[RequireComponent(typeof(AudioSource))]
 public class Audio : MonoBehaviour
 {
-    private AudioSource audioSource;
+    public AudioSource audioSource;
     public static float[] AudioSamples = new float[512];
+    public AudioClip[] audioClips;
+    public AudioListener audioListener;
     // Start is called before the first frame update
     void Start()
     {
-        audioSource = GetComponent<AudioSource>();
+        audioListener = GetComponent<AudioListener>();
+        audioSource = gameObject.GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
+
+   
     void Update()
     {
+        if(!audioSource.isPlaying)
+        {
+            PlayRandom();
+            //AudioSpectrum();
+            
+        }
         AudioSpectrum();
-        //audioSource.GetSpectrumData(AudioSamples, 0, FFTWindow.Blackman);
     }
 
     public void AudioSpectrum()
     {
         audioSource.GetSpectrumData(AudioSamples, 0, FFTWindow.Blackman);
+    }
+
+    void PlayRandom()
+    {
+        audioSource.clip = audioClips[Random.Range(0, audioClips.Length)];
+        audioSource.Play();
+       
+
     }
 }
