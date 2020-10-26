@@ -7,7 +7,7 @@ using System.IO;
 public class Audio : MonoBehaviour
 {
     public AudioSource audioSource;
-    public static float[] AudioSamples = new float[512];
+    public static float[] AudioSamples = new float[128];
     public AudioClip[] audioClips;
     public AudioListener audioListener;
     // Start is called before the first frame update
