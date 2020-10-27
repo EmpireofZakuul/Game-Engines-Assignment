@@ -8,6 +8,7 @@ public class AudioVisual : MonoBehaviour
     GameObject[] cubes = new GameObject[128];
     public float scaleMax;
     public  const float sampleAngle = 360.0f/128;
+    public int multiply = 15;
 
 
     // Start is called before the first frame update
@@ -20,7 +21,7 @@ public class AudioVisual : MonoBehaviour
             SpawnCube.transform.position = this.transform.position;
             SpawnCube.transform.parent = this.transform;
             this.transform.eulerAngles = new Vector3(0, sampleAngle * i, 0);
-            SpawnCube.transform.position = Vector3.forward * 100;
+            SpawnCube.transform.position = Vector3.forward * multiply;
             cubes[i] = SpawnCube;
         }
         //Grid();
