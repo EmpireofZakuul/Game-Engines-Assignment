@@ -7,9 +7,11 @@ using System.IO;
 public class Audio : MonoBehaviour
 {
     public AudioSource audioSource;
-    public static float[] AudioSamples = new float[128];
+    public static float[] AudioSamples = new float[64];
     public AudioClip[] audioClips;
     public AudioListener audioListener;
+  //  public static int samplesOfCubes = 64;
+
     // Start is called before the first frame update
     void Start()
     {
