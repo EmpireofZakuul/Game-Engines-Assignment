@@ -28,7 +28,7 @@ public class PauseGame : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
-        {
+        {//make sure to turn off if paused so the escape key wont work to go back into the game
             if (Paused)
             {
                 Resume();
@@ -47,6 +47,7 @@ public class PauseGame : MonoBehaviour
         Time.timeScale = 1f;
         Paused = false;
         AudioListener.pause = false;
+        Cursor.lockState = CursorLockMode.Locked;
         //  health.SetActive(true);
         // keymenu.SetActive(false);
         // menu.SetActive(false);
@@ -61,6 +62,7 @@ public class PauseGame : MonoBehaviour
         Paused = true;
         //health.SetActive(false);
         AudioListener.pause = true;
+        Cursor.lockState = CursorLockMode.None;
     }
 
     public void QuitGameMenu()
