@@ -4,48 +4,43 @@ using UnityEngine;
 
 public class Grid : MonoBehaviour
 {
-    public int theXAxisGrid = 4;
-    public int theYAxisGrid = 4;
-    public GameObject spawnBuildingPrefab;
-    public Vector3 OriginOfTheGrid = Vector3.zero;
+    public int gridXAxis = 4;
+    public int gridYAxis = 4;
+    public GameObject _prefabSpawnBuilding;
+    public Vector3 centerOfTheGrid = Vector3.zero;
 
-    public float spaceBetweenTheBuildings = 2f;
-    public bool generateOnEnableGame;
+    public float individualBuildingSpacing = 2f;
+    public bool onEnableGenerate;
     public GameObject NavMeshSurface;
 
 
     void OnEnable()
     {
-        if (generateOnEnableGame)
+        if (onEnableGenerate)
         {
             GeneratePlay();
 
         }
     }
-
-    public void GeneratePlay()
-    {
-        SpawnGridCity();
-        
-    }
-
-
     void SpawnGridCity()
     {
-        for (int x = 0; x < theXAxisGrid; x++)
+        for (int x = 0; x < gridXAxis; x++)
         {
-            for (int z = 0; z < theYAxisGrid; z++)
+            for (int z = 0; z < gridYAxis; z++)
             {
-                GameObject Prefabclone = Instantiate(spawnBuildingPrefab,
-                    transform.position + OriginOfTheGrid + new Vector3(spaceBetweenTheBuildings * x, 0, spaceBetweenTheBuildings * z), transform.rotation);
+                GameObject Prefabclone = Instantiate(_prefabSpawnBuilding,
+                    transform.position + centerOfTheGrid + new Vector3(individualBuildingSpacing * x, 0, individualBuildingSpacing * z), transform.rotation);
                 Prefabclone.transform.SetParent(this.transform);
             }
         }
 
 
     }
+    public void GeneratePlay()
+    {
+        SpawnGridCity();
 
-    
+    }
 
 
 }
