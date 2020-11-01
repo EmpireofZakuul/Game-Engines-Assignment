@@ -5,7 +5,7 @@ using UnityEngine;
 public class BuildproceduralCityBlocks : MonoBehaviour
 {
     public int maxPiecesOfBuilding = 20;
-    public float perlinScale = 2f;
+   // public float perlinScale = 2f;
 
     public int minimumRandom = -5;
     public int maximumRandom = 10;
@@ -15,16 +15,17 @@ public class BuildproceduralCityBlocks : MonoBehaviour
 
     void Start()
     {
-      //  CityBuild();
+        CityBuild();
     }
 
-    /*
+    
 
     public void CityBuild()
     {
-        float sampledValue = PerlinNoise.instance.Perlin(transform.position);
+        //float sampledValue = PerlinNoise.instance.Perlin(transform.position);
 
-        int Pieces = Mathf.FloorToInt(maxPiecesOfBuilding * (sampledValue));
+        // int Pieces = Mathf.FloorToInt(maxPiecesOfBuilding * (sampledValue));
+        int Pieces = Mathf.FloorToInt(maxPiecesOfBuilding);
         Pieces += Random.Range(minimumRandom, maximumRandom);
 
         if (Pieces <= 0)
@@ -52,10 +53,10 @@ public class BuildproceduralCityBlocks : MonoBehaviour
         float OffsetHeight = baseBounds.size.y;
 
         cloneSpawn.transform.SetParent(this.transform);
-
+    
         //GeneratedObjectControl.instance.AddObject(cloneSpawn);
 
         return OffsetHeight;
     }
-    */
+    
 }
