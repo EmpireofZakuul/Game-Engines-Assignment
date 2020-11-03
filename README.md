@@ -11,4 +11,6 @@ I will achieve the procedurally generated city by using Perlin noise. This techn
 To achieve the unity data spectrum, I will get the songs data from the audio source and then from that data I dynamically change the height of the cubes which form up the rings that rotate around the sun. To add a bit more flare to the game I will use unity post-processing effect so that I can have each of the cubes that form the ring around the sun, a different colour.
 
 <h2>Player's gaol in the game</h2>
-The goal of the game is for the player to kill all of the enemy robots. These enemy robots will move towards the player, but the player can choose to roam a
+The goal of the game is for the player to kill all of the enemy robots. These enemy robots will move towards the player, but the player can choose to roam around the map to kill them. When the player has killed all of the enemy robots, then the player will win the game and the game will end.
+<br>
+If the player dies before the player kills all of the enemy robots, then the player will lose the game.
