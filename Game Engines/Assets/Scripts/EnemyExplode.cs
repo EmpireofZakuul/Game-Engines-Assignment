@@ -20,11 +20,12 @@ public class EnemyExplode : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (enemyHealth.health <= 0 && !explode)
+        if (EnemyHealth.health <= 0 && !explode)
         {
             source.Play();
             Instantiate(effect, transform.position, transform.rotation);
             explode = true;
+            Destroy(gameObject,0.1f);
         }
     }
 }

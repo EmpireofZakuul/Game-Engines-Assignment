@@ -5,11 +5,13 @@ using UnityEngine;
 public class bulletDie : MonoBehaviour
 {
 
+
     public void OnTriggerEnter(Collider other)
     {
-        if(gameObject.tag == "Enemy")
+        if(other.gameObject.tag == "Enemy")
         {
-            Destroy(other.gameObject, 1f);
+            EnemyHealth.health -= 3f;
+            Destroy(gameObject, 1f);
         }
         else
         {
