@@ -4338,7 +4338,10 @@ MonoBehaviour:
   effect: {fileID: 2978547037469180398, guid: 57ccc2309fb7a264e8bcf18cf1df1c6f, type: 3}
   explode: 0
   source: {fileID: 1938239896}
-  shot: {fileID: 0}
+  clipsAudio:
+  - {fileID: 8300000, guid: 66a6edcdb49c71245bff8df74301e4f4, type: 3}
+  - {fileID: 8300000, guid: 76604f2fc03c51d44bd3d15516849043, type: 3}
+  - {fileID: 8300000, guid: 92ebaf923499d364f87aeace6a7b0a1c, type: 3}
   theObjectToBeUnParented: {fileID: 1226176130}
 --- !u!1 &1987319055
 GameObject:
