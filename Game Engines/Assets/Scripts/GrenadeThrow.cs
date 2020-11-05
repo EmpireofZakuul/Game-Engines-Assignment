@@ -2,31 +2,33 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class GrenadeThrow : MonoBehaviour
 {
-    public Camera fpsCamera;
-    public ParticleSystem muzzleFlash;
-    public GameObject impactEffect;
+    
     public float fireRate = 15f;
-    public float hitForce = 60f;
+   
     private float nextTimeToFire = 0f;
     public GameObject grenade;
-    public Rigidbody Grenade;
     public float speed = 20;
     public Transform Hand;
     public int Grenadeamound = 5;
-    public Text grenades;
+    public TextMeshProUGUI grenades;
+
 
 
     public void Start()
     {
-
+     
+      
+        
     }
     // Start is called before the first frame update
     void Update()
     {
-        grenades.text = Grenadeamound.ToString();
+        // grenades.text = Grenadeamound.ToString();
+        grenades.SetText(Grenadeamound.ToString());
         if (Grenadeamound > 0)
         {
 
