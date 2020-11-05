@@ -1,7 +1,7 @@
 # Game-Engines-Assignment
 <p><h3>Name:</h3>Marcus Gleeson<br>
 <h3>Student Number:</h3>D19124543<br>
-<strong>Class Group:</strong>DT508
+<b>Class Group:</b>DT508
 </P>
 
 <h1>Game Idea</h1>
