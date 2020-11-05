@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 1790629836008915460}
   - component: {fileID: 4556920515324278478}
   - component: {fileID: 8549516813185162785}
-  - component: {fileID: -2248137073612069686}
   - component: {fileID: -5150155435015411814}
+  - component: {fileID: -6164108181594183333}
   m_Layer: 0
   m_Name: mp40Bullet
   m_TagString: Untagged
@@ -98,18 +98,6 @@ CapsuleCollider:
   m_Height: 0.00030467837
   m_Direction: 1
   m_Center: {x: 0.00004547744, y: 0, z: 0}
---- !u!114 &-2248137073612069686
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2611405402142168859}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86b6d44255419574794880c0a028497e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!54 &-5150155435015411814
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -126,3 +114,15 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-6164108181594183333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2611405402142168859}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86b6d44255419574794880c0a028497e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
