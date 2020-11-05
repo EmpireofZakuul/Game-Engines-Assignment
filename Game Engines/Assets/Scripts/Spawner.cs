@@ -5,22 +5,35 @@ using TMPro;
 
 public class Spawner : MonoBehaviour
 {
-    public int spawnRateEnemies = 5;
-    public int enemyAmound = 10;
+    public int spawnRateEnemies = 2;
+    public int enemyAmoundMax = 10;
     public TextMeshProUGUI Enemys;
+    public static int count = 0;
+    public GameObject enemyPrefab;
+    public GameObject[] spawnPoints;
+    private GameObject currentPoint;
+    private int EnemyIndex;
 
 
-    void Spawn()
-    {
-       
-        
-      
-       
-    }
+   public void SpawnEnemy()
+   {
+        spawnPoints = GameObject.FindGameObjectsWithTag("SpawnPoint");
+        EnemyIndex = Random.Range(0, spawnPoints.Length);
+        currentPoint = spawnPoints[EnemyIndex];
+        enemyPrefab = Instantiate(enemyPrefab, currentPoint.transform.position, currentPoint.transform.rotation) as GameObject;
+        enemyPrefab.transform.parent = gameObject.transform;
+
+   }
     // Start is called before the first frame update
     void Start()
     {
-        //Invoke("Spawn", 5);
+
+
+
+    }
+    public void Update()
+    {
+        Enemys.SetText(count.ToString());
     }
 
     void OnEnable()
@@ -28,29 +41,26 @@ public class Spawner : MonoBehaviour
         StartCoroutine(SpawnCoroutine());
     }
 
-    int count = 0;
-
     System.Collections.IEnumerator SpawnCoroutine()
     {
         while (true)
         {
-            Spawn();
+            SpawnEnemy();
 
             
             count ++;
-            if (transform.childCount == enemyAmound)
-            {
+
+            //GameObject[] Enemy =
+               // GameObject.FindGameObjectsWithTag("Enemy");
+            //if (Enemy.Length == enemyAmoundMax)
+                if (count == enemyAmoundMax)
+                {
                 break;
-            }
-            
-            GameObject[] Enemy =
-                GameObject.FindGameObjectsWithTag("Enemy");
-            if (Enemy.Length == enemyAmound)
-            {
-                break;
-            }
-            yield return new WaitForSeconds(1.0f / (float)spawnRate);
+                }
+            yield return new WaitForSeconds(1.0f / (float)spawnRateEnemies);
         }
     }
 
+        
+    
 }

@@ -6,7 +6,7 @@ public class EnemyExplode : MonoBehaviour
 {
     public EnemyHealth enemyHealth;
     public Transform effect;
-
+    Spawner Spawner;
     public bool explode = false;
     public AudioSource source;
     public AudioClip[] clipsAudio;
@@ -29,6 +29,7 @@ public class EnemyExplode : MonoBehaviour
 
             StartCoroutine(ExampleCoroutine());
             explode = true;
+            Spawner.count--;
         }
     }
 
@@ -44,7 +45,7 @@ public class EnemyExplode : MonoBehaviour
         Instantiate(effect, transform.position, transform.rotation);
         Destroy(gameObject, 0.9f);
 
-
+       
 
     }
 }

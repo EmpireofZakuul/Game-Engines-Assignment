@@ -1,4 +1,8 @@
 # Game-Engines-Assignment
+<p>**Name:**Marcus Gleeson<br>
+**Student Number:**D19124543<br>
+**Class Group:**DT508
+</P>
 
 <h1>Game Idea</h1>
 <p>For my Game Engines Assignment, I will be doing a procedurally generated city shooter game. This city will feature procedurally generated buildings of different heights that the player can roam around.</p>

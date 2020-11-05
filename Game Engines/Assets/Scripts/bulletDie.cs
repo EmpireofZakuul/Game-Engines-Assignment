@@ -10,12 +10,16 @@ public class bulletDie : MonoBehaviour
     {
         if(other.gameObject.tag == "Enemy")
         {
+            other.gameObject.GetComponent<EnemyHealth>();
             EnemyHealth.health -= 3f;
             Destroy(gameObject, 1f);
+            Debug.Log("Hit! " + other.name);
         }
         else
         {
             Destroy(gameObject, 2f);
         }
     }
+     
+     
 }
