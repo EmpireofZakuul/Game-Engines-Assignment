@@ -3,7 +3,7 @@
 <b>Student Number:</b>D19124543<br>
 <b>Class Group:</b>DT508
 </P>
-<p>This was a new unity project that I started at the start of reading week, all modeles and assets are assets that I have created myself</p>
+<p>This was a new unity project that I started at the start of reading week, all moddeles and assets are assets that I have created myself</p>
 <h1>Game Idea</h1>
 <p>For my Game Engines Assignment, I will be doing a procedurally generated city shooter game. This city will feature procedurally generated buildings of different heights that the player can roam around.</p>
 <p>On top of the procedurally generated city, I will look at using the unity spectrum data to make a sphere in the game look like a sun with rotating rings that reacts to the sound of the game music.</p>
