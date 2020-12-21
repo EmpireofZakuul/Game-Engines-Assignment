@@ -12,7 +12,7 @@
 <p>I will achieve the procedurally generated city by using Perlin noise. This technique will allow me to have some of the buildings, different heights in the game as it will sample the Perlin noise and then instantiate the building's height from that sample of the Perlin noise.</p>
 <p>To achieve the unity spectrum data, I will get the songs data from the audio source and then from that data I dynamically change the height of the cubes which form up the rings that rotate around the sun. To add a bit more flare to the game, I will use unity post-processing effect so that I can have each of the cubes that form the ring around the sun, a different colour.</p>
 
-[![YouTube](http://img.youtube.com/vi/AeoWiYCTMWE/0.jpg)](https://youtube.com/AeoWiYCTMWE
+[![YouTube](http://img.youtube.com/vi/AeoWiYCTMWE/0.jpg)](https://youtube.com/AeoWiYCTMWE_channel=GrandAdmiralThrawn
 
 https://youtube.com/AeoWiYCTMWE
 
